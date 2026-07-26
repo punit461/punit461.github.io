@@ -1,0 +1,47 @@
+# Google AdSense Implementation Summary
+
+This document summarizes the steps taken to correctly implement Google AdSense for the site ownership verification and ad serving.
+
+## 1. Environment Variable Setup
+We utilize an environment variable to securely and dynamically manage the AdSense Publisher ID. 
+- **Variable Name:** `NEXT_PUBLIC_ADSENSE_PUBLISHER_ID`
+- **Value:** `pub-7089675560767740` (Set in `.env`)
+
+This approach ensures the Publisher ID can be updated in one place without modifying the codebase.
+
+## 2. Layout Integration (`src/app/layout.tsx`)
+The AdSense requirements have been integrated into the root layout to ensure they are present on every page of the application. 
+
+### ID Normalization
+The code automatically checks if the `NEXT_PUBLIC_ADSENSE_PUBLISHER_ID` has the `ca-` prefix required by Google's script and meta tags. If missing, it prepends it:
+```typescript
+let adsensePublisherId = process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID || '';
+if (adsensePublisherId && !adsensePublisherId.startsWith('ca-')) {
+  adsensePublisherId = \`ca-\${adsensePublisherId}\`;
+}
+```
+
+### Site Ownership Meta Tag
+Google requires a specific meta tag in the `<head>` of the document to verify site ownership.
+```tsx
+<meta name="google-adsense-account" content={adsensePublisherId} />
+```
+
+### AdSense Script Tag
+The core AdSense JavaScript snippet is injected using Next.js's native `<Script>` component to optimize loading performance.
+```tsx
+<Script
+  async
+  src={\`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=\${adsensePublisherId}\`}
+  crossOrigin="anonymous"
+  strategy="afterInteractive"
+/>
+```
+
+## 3. Publisher Authorization (`public/ads.txt`)
+To authorize Google to sell ads on your site, an `ads.txt` file was created in the `public/` directory. This file is served at the root of the domain (e.g., `yoursite.com/ads.txt`).
+- **Path:** `public/ads.txt`
+- **Content:** `google.com, pub-7089675560767740, DIRECT, f08c47fec0942fa0`
+
+## Conclusion
+With these three components configured—**meta tag**, **script snippet**, and **ads.txt**—Google AdSense will be able to successfully verify the site ownership and serve ads effectively across the application.
