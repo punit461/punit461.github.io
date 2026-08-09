@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refactoring SAM 3 into a Production Annotation Tool - Punit Bharadwaj</title>
+    
+    <!-- Google AdSense Verification -->
+    <meta name="google-adsense-account" content="ca-pub-7089675560767740" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7089675560767740" crossorigin="anonymous"></script>
+
+    <meta name="description" content="Turning Meta's Segment Anything Model 3 into a production-grade annotation tool with professional UI, COCO export, and optimized VLA dataset workflows.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">Punit Bharadwaj</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="https://punit461.github.io/toolzonex" target="_blank">ToolZoneX</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article class="glass-panel article-content">
+            <header class="article-header">
+                <h1 style="font-size: 2.5rem;">Refactoring SAM 3 into a Production Annotation Tool</h1>
+                <div class="article-meta">
+                    <span>Published on July 15, 2026</span> &bull; <span>7 min read</span>
+                </div>
+            </header>
+
+            <div class="related-project">
+                <h4>Related Project</h4>
+                <p>SAM-3 Professional Annotation Tool — a production refactor of Meta's SAM 3 for high-fidelity dataset labeling.</p>
+                <div class="related-project-links">
+                    <a href="https://github.com/punit461/SAM-3-Professional-Annotation-Tool" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                    <a href="projects.html">All Projects</a>
+                </div>
+            </div>
+
+            <p>Training Vision Language Action (VLA) models and other modern computer vision systems requires large, high-quality annotated datasets. Meta's <strong>Segment Anything Model 3 (SAM 3)</strong> can segment objects in images with remarkable speed and accuracy — but the original annotation tool needed significant work to be usable in production workflows.</p>
+
+            <p>I set out to refactor the existing SAM 3 Annotation Tool into a <strong>professional-grade labeling platform</strong> with a stable UI, reliable export pipelines, and optimized performance for day-to-day dataset creation.</p>
+
+            <h2>Starting Point</h2>
+            <p>The original <a href="https://github.com/software-ai-life/SAM3_Annotation_Tool" target="_blank" rel="noopener noreferrer" style="color: var(--accent-color);">SAM3_Annotation_Tool</a> by software-ai-life provided the core SAM 3 integration — click-to-segment, mask generation, and basic annotation saving. It was a solid proof of concept, but had limitations for production use:</p>
+            <ul>
+                <li>UI library compatibility issues causing instability during long annotation sessions</li>
+                <li>No standardized export format for downstream training pipelines</li>
+                <li>Limited error handling when SAM 3 inference failed on edge cases</li>
+            </ul>
+
+            <h2>Key Enhancements</h2>
+            <h3>1. Complete UI Overhaul</h3>
+            <p>I replaced the original UI framework with a more robust, production-grade setup. The new interface provides clear visual feedback during segmentation, intuitive mask editing controls, and a layout optimized for annotators spending hours on dataset work.</p>
+
+            <h3>2. COCO-Format Export</h3>
+            <p>Most ML training pipelines expect annotations in COCO format — JSON with image metadata, bounding boxes, segmentation polygons, and category labels. I built a reliable export pipeline that converts SAM 3 masks into COCO-compatible annotations, ready for direct ingestion into training frameworks like Detectron2, MMDetection, or custom PyTorch loaders.</p>
+
+            <h3>3. Performance Optimization</h3>
+            <p>Annotation speed directly impacts dataset throughput. Optimizations included:</p>
+            <ul>
+                <li>Lazy loading of images in large datasets to reduce memory pressure</li>
+                <li>Cached model weights to avoid reload between sessions</li>
+                <li>Batch export operations for multi-image annotation sessions</li>
+            </ul>
+
+            <h2>Workflow for VLA Dataset Creation</h2>
+            <p>Vision Language Action models need pixel-precise segmentation paired with semantic labels. The typical workflow with this tool looks like:</p>
+            <ol>
+                <li>Load a batch of images into the annotation session</li>
+                <li>Use SAM 3's click-to-segment to generate initial masks</li>
+                <li>Refine masks with manual adjustments where SAM 3 under-segments</li>
+                <li>Assign category labels to each segmented region</li>
+                <li>Export the session as COCO JSON for training pipeline ingestion</li>
+            </ol>
+
+            <h2>Licensing & Compliance</h2>
+            <p>This project is a professional refactor licensed under Apache 2.0, incorporating elements from the original MIT-licensed work. Both licenses are maintained with proper attribution in the repository's NOTICE file — important when building on open-source foundations for commercial or research use.</p>
+
+            <h2>Lessons Learned</h2>
+            <ul>
+                <li><strong>Foundation models need production wrappers.</strong> SAM 3's segmentation quality is excellent, but raw model output is not a product — the UI, export, and error handling layer is what makes it usable.</li>
+                <li><strong>Export format is a first-class feature.</strong> Annotators will abandon a tool if they cannot get data out in the format their training pipeline expects.</li>
+                <li><strong>Refactoring beats rewriting.</strong> Building on the original tool's SAM 3 integration saved weeks of model wiring work.</li>
+            </ul>
+
+            <h2>Conclusion</h2>
+            <p>The SAM-3 Professional Annotation Tool demonstrates that taking a research-grade model and wrapping it in production tooling can dramatically accelerate dataset creation for computer vision projects. Check out the source on <a href="https://github.com/punit461/SAM-3-Professional-Annotation-Tool" target="_blank" rel="noopener noreferrer" style="color: var(--accent-color);">GitHub</a>.</p>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms & Conditions</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <p>&copy; 2026 Punit Bharadwaj. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

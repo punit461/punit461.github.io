@@ -12,13 +12,14 @@
     <meta name="description" content="Read articles about AI, Machine Learning, and Software Engineering by Punit Bharadwaj.">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="blog">
 
     <nav>
         <a href="index.html" class="logo">Punit Bharadwaj</a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
             <li><a href="blog.html" class="active">Blog</a></li>
             <li><a href="https://punit461.github.io/toolzonex" target="_blank">ToolZoneX</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -32,28 +33,8 @@
         </section>
 
         <section class="projects">
-            <div class="grid">
-                
-                <div class="glass-panel project-card">
-                    <h3>Building Autonomous AI Agents with LangChain</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Published: August 12, 2026</p>
-                    <p>A comprehensive guide on designing, building, and deploying multi-agent systems using modern LLMs and LangChain. Learn about agent memory, tool usage, and real-world deployment challenges.</p>
-                    <div class="btn-container">
-                        <a href="building-ai-agents.html" class="btn btn-secondary">Read Article</a>
-                    </div>
-                </div>
-
-                <!-- Placeholder for future articles -->
-                <!-- You should add at least 4-5 more articles like this one to get AdSense approval -->
-                <div class="glass-panel project-card">
-                    <h3>Optimizing RAG Pipelines for Production</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Draft</p>
-                    <p>Best practices for vector search, chunking strategies, and evaluating retrieval quality in real-world LLM applications.</p>
-                    <div class="btn-container">
-                        <button class="btn btn-secondary" disabled style="opacity: 0.5; cursor: not-allowed;">Coming Soon</button>
-                    </div>
-                </div>
-
+            <div class="grid" id="blog-posts">
+                <p class="error-message">Loading articles...</p>
             </div>
         </section>
     </main>
@@ -67,5 +48,6 @@
         <p>&copy; 2026 Punit Bharadwaj. All rights reserved.</p>
     </footer>
 
+    <script src="js/site.js"></script>
 </body>
 </html>

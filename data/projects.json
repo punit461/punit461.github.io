@@ -1,0 +1,90 @@
+[
+  {
+    "id": "toolzonex",
+    "name": "ToolZoneX",
+    "description": "A comprehensive platform offering 100+ free online calculators and AI utilities for finance, health, and everyday decisions — built for India, designed to be fast.",
+    "category": "web",
+    "language": "TypeScript",
+    "githubUrl": "https://github.com/punit461/toolzonex",
+    "liveUrl": "https://punit461.github.io/toolzonex",
+    "blogSlug": "blog-building-toolzonex.html",
+    "featured": true
+  },
+  {
+    "id": "sam3-annotation",
+    "name": "SAM-3 Professional Annotation Tool",
+    "description": "Production-grade refactor of Meta's Segment Anything Model 3 for rapid, high-fidelity data labeling with COCO-format export for VLA model training.",
+    "category": "ai",
+    "language": "JavaScript",
+    "githubUrl": "https://github.com/punit461/SAM-3-Professional-Annotation-Tool",
+    "liveUrl": null,
+    "blogSlug": "blog-sam3-annotation-tool.html",
+    "featured": true
+  },
+  {
+    "id": "aura",
+    "name": "Aura Email Assistant",
+    "description": "AI-powered email assistant that fetches unread Outlook emails and generates intelligent draft responses to reduce inbox management time.",
+    "category": "ai",
+    "language": "Python",
+    "githubUrl": "https://github.com/punit461/Aura",
+    "liveUrl": null,
+    "blogSlug": "blog-aura-email-assistant.html",
+    "featured": true
+  },
+  {
+    "id": "ai-a2z",
+    "name": "Artificial-Intelligence-A2Z",
+    "description": "Structured Jupyter-based curriculum to learn Artificial Intelligence, Machine Learning, and Computer Vision from scratch.",
+    "category": "learning",
+    "language": "Jupyter Notebook",
+    "githubUrl": "https://github.com/punit461/Artificial-Intelligence-A2Z",
+    "liveUrl": null,
+    "blogSlug": "blog-ai-learning-a2z.html",
+    "featured": true
+  },
+  {
+    "id": "trialtreat",
+    "name": "TrialTreat",
+    "description": "Two-sided marketplace connecting beauty academies and trainees with consumers seeking affordable beauty services. Full-stack with React, Node.js, and PostgreSQL.",
+    "category": "web",
+    "language": "TypeScript",
+    "githubUrl": "https://github.com/punit461/trialtreat",
+    "liveUrl": null,
+    "blogSlug": null,
+    "featured": false
+  },
+  {
+    "id": "ml-projects",
+    "name": "MachineLearningProjects",
+    "description": "Central repository for machine learning experiments, models, and notebooks — a growing collection of ML work in one place.",
+    "category": "ai",
+    "language": "Python",
+    "githubUrl": "https://github.com/punit461/MachineLearningProjects",
+    "liveUrl": null,
+    "blogSlug": null,
+    "featured": false
+  },
+  {
+    "id": "lilhakr-browser",
+    "name": "Lilhakr Browser",
+    "description": "Custom web browser built with Python, PyQt6, and PyWebEngine — a side project exploring desktop browser development.",
+    "category": "tools",
+    "language": "Python",
+    "githubUrl": "https://github.com/punit461/Lilhakr_Browser",
+    "liveUrl": null,
+    "blogSlug": null,
+    "featured": false
+  },
+  {
+    "id": "supercool-scripts",
+    "name": "Supercool Scripts",
+    "description": "A collection of standalone Python and Jupyter scripts that automate everyday tasks and make life easier.",
+    "category": "tools",
+    "language": "Jupyter Notebook",
+    "githubUrl": "https://github.com/punit461/supercool_scritps",
+    "liveUrl": null,
+    "blogSlug": null,
+    "featured": false
+  }
+]
