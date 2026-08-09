@@ -1,3 +1,7 @@
+---
+layout: null
+nav: blog
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +18,8 @@
 </head>
 <body>
 
-    <nav>
+    {% include nav.html %}
+    <nav class="legacy-nav" aria-hidden="true">
         <a href="index.html" class="logo">Punit Bharadwaj</a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
@@ -94,7 +99,8 @@ def fetch_weather(location: str) -> str:
         </article>
     </main>
 
-    <footer>
+    {% include footer.html %}
+    <footer class="legacy-footer" aria-hidden="true">
         <div class="footer-links">
             <a href="privacy.html">Privacy Policy</a>
             <a href="terms.html">Terms & Conditions</a>
@@ -103,5 +109,6 @@ def fetch_weather(location: str) -> str:
         <p>&copy; 2026 Punit Bharadwaj. All rights reserved.</p>
     </footer>
 
+    <script src="js/navigation.js"></script>
 </body>
 </html>

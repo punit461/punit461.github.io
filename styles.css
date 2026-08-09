@@ -76,6 +76,43 @@ nav {
   color: var(--text-primary);
 }
 
+.legacy-nav,
+.legacy-footer {
+  display: none;
+}
+
+.nav-toggle {
+  display: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0.55rem;
+  border: 1px solid var(--glass-border);
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  cursor: pointer;
+}
+
+.nav-toggle span:not(.sr-only) {
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 0.22rem 0;
+  background: var(--text-primary);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* Main Content */
 main {
   flex: 1;
@@ -185,6 +222,16 @@ p {
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+.project-image {
+  width: calc(100% + 3rem);
+  height: 10.5rem;
+  margin: -1.5rem -1.5rem 1.25rem;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+  border-bottom: 1px solid var(--glass-border);
+  background: linear-gradient(135deg, #172554, #4c1d95);
 }
 
 .project-card .btn-container {
@@ -389,10 +436,32 @@ main.wide {
 /* Responsive */
 @media (max-width: 768px) {
   h1 { font-size: 2.5rem; }
-  .nav-links { display: none; } /* Could add a hamburger menu if needed */
+  nav { padding: 0.9rem 1.25rem; }
+  .logo { font-size: 1.2rem; }
+  .nav-toggle { display: block; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem 1.25rem 1.25rem;
+    flex-direction: column;
+    gap: 0;
+    background: rgba(15, 23, 42, 0.98);
+    border-bottom: 1px solid var(--glass-border);
+  }
+  .nav-links.is-open { display: flex; }
+  .nav-links li { border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
+  .nav-links li:last-child { border-bottom: 0; }
+  .nav-links a { display: block; padding: 0.85rem 0; }
+  .nav-toggle[aria-expanded="true"] span:nth-of-type(2) { transform: translateY(6px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:nth-of-type(3) { opacity: 0; }
+  .nav-toggle[aria-expanded="true"] span:nth-of-type(4) { transform: translateY(-6px) rotate(-45deg); }
   .hero-buttons { flex-direction: column; }
   .btn { text-align: center; }
   .section-header { flex-direction: column; align-items: flex-start; }
   .project-links { flex-direction: column; }
   .project-links .btn { text-align: center; }
+  .project-image { height: 9rem; }
 }

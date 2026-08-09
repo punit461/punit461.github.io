@@ -1,0 +1,11 @@
+title: Punit Bharadwaj
+description: Portfolio of Punit Bharadwaj, an AI/ML Engineer building intelligent systems and practical tools.
+url: "https://punit461.github.io"
+baseurl: ""
+lang: en
+timezone: Asia/Kolkata
+markdown: kramdown
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - plan.md

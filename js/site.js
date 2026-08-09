@@ -28,9 +28,13 @@ function renderProjectCard(project, options = {}) {
   const blogButton = project.blogSlug
     ? `<a href="${escapeHtml(project.blogSlug)}" class="btn btn-secondary">Read Blog</a>`
     : '';
+  const image = project.imageUrl
+    ? `<img class="project-image" src="${escapeHtml(project.imageUrl)}" alt="Preview of ${escapeHtml(project.name)}" loading="lazy" referrerpolicy="no-referrer">`
+    : '';
 
   return `
     <div class="glass-panel project-card" data-category="${escapeHtml(project.category)}">
+      ${image}
       <div class="project-card-header">
         <h3>${escapeHtml(project.name)}</h3>
         <div class="project-tags">

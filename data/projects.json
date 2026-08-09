@@ -6,6 +6,7 @@
     "category": "web",
     "language": "TypeScript",
     "githubUrl": "https://github.com/punit461/toolzonex",
+    "imageUrl": "https://opengraph.githubassets.com/portfolio-toolzonex/punit461/toolzonex",
     "liveUrl": "https://punit461.github.io/toolzonex",
     "blogSlug": "blog-building-toolzonex.html",
     "featured": true
@@ -17,6 +18,7 @@
     "category": "ai",
     "language": "JavaScript",
     "githubUrl": "https://github.com/punit461/SAM-3-Professional-Annotation-Tool",
+    "imageUrl": "https://opengraph.githubassets.com/portfolio-sam3/punit461/SAM-3-Professional-Annotation-Tool",
     "liveUrl": null,
     "blogSlug": "blog-sam3-annotation-tool.html",
     "featured": true
@@ -28,6 +30,7 @@
     "category": "ai",
     "language": "Python",
     "githubUrl": "https://github.com/punit461/Aura",
+    "imageUrl": "https://opengraph.githubassets.com/portfolio-aura/punit461/Aura",
     "liveUrl": null,
     "blogSlug": "blog-aura-email-assistant.html",
     "featured": true
@@ -39,6 +42,7 @@
     "category": "learning",
     "language": "Jupyter Notebook",
     "githubUrl": "https://github.com/punit461/Artificial-Intelligence-A2Z",
+    "imageUrl": "https://opengraph.githubassets.com/portfolio-ai-a2z/punit461/Artificial-Intelligence-A2Z",
     "liveUrl": null,
     "blogSlug": "blog-ai-learning-a2z.html",
     "featured": true
@@ -50,6 +54,7 @@
     "category": "web",
     "language": "TypeScript",
     "githubUrl": "https://github.com/punit461/trialtreat",
+    "imageUrl": "https://opengraph.githubassets.com/portfolio-trialtreat/punit461/trialtreat",
     "liveUrl": null,
     "blogSlug": null,
     "featured": false
@@ -61,6 +66,7 @@
     "category": "ai",
     "language": "Python",
     "githubUrl": "https://github.com/punit461/MachineLearningProjects",
+    "imageUrl": "https://opengraph.githubassets.com/portfolio-ml-projects/punit461/MachineLearningProjects",
     "liveUrl": null,
     "blogSlug": null,
     "featured": false
@@ -72,6 +78,7 @@
     "category": "tools",
     "language": "Python",
     "githubUrl": "https://github.com/punit461/Lilhakr_Browser",
+    "imageUrl": "https://opengraph.githubassets.com/portfolio-lilhakr/punit461/Lilhakr_Browser",
     "liveUrl": null,
     "blogSlug": null,
     "featured": false
@@ -83,6 +90,7 @@
     "category": "tools",
     "language": "Jupyter Notebook",
     "githubUrl": "https://github.com/punit461/supercool_scritps",
+    "imageUrl": "https://opengraph.githubassets.com/portfolio-supercool/punit461/supercool_scritps",
     "liveUrl": null,
     "blogSlug": null,
     "featured": false
