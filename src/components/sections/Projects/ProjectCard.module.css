@@ -1,0 +1,204 @@
+.card {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: border-color 0.4s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  border-color: var(--border-hover);
+}
+
+.imageWrap {
+  position: relative;
+  /* Matches GitHub's 1200x600 open-graph repo cards so they aren't cropped. */
+  aspect-ratio: 2 / 1;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s var(--ease-out);
+}
+
+.card:hover .image {
+  transform: scale(1.08);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 10, 11, 0) 40%, rgba(10, 10, 11, 0.9) 100%);
+}
+
+.featuredBadge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: var(--accent);
+  color: #14100c;
+}
+
+.year {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text);
+  background: rgba(10, 10, 11, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+}
+
+.body {
+  padding: 24px 24px 26px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.categoryRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.categoryBadge {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent2);
+}
+
+.categoryBadge::after {
+  content: "\2022";
+  margin-left: 6px;
+  color: var(--text-faint);
+}
+
+.categoryBadge:last-child::after {
+  content: "";
+}
+
+.title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--cream);
+  margin-bottom: 8px;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.reveal {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 0.5s var(--ease-out), opacity 0.4s ease;
+}
+
+.card:hover .reveal {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.reveal > * {
+  overflow: hidden;
+}
+
+.longDescription {
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--text-muted);
+  padding-top: 14px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-top: 14px;
+}
+
+.tag {
+  font-size: 11.5px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+.links {
+  display: flex;
+  gap: 10px;
+  padding-top: 18px;
+}
+
+.linkBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border-hover);
+  color: var(--text);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.linkBtn:hover {
+  background: var(--surface-hover);
+}
+
+.linkBtnSolid {
+  background: var(--cream);
+  color: #0a0a0b;
+  border-color: var(--cream);
+}
+
+.linkBtnSolid:hover {
+  background: #e4e2db;
+}
+
+.glowBorder {
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  padding: 1px;
+  opacity: 0;
+  pointer-events: none;
+  background: linear-gradient(135deg, var(--accent), transparent 40%, transparent 60%, var(--accent2));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover .glowBorder {
+  opacity: 0.55;
+}

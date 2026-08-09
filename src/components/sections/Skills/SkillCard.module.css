@@ -1,0 +1,70 @@
+.card {
+  padding: 26px 22px;
+  height: 100%;
+}
+
+.float {
+  animation: float 5s ease-in-out infinite;
+  animation-delay: var(--float-delay, 0s);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.iconWrap {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: var(--accent-soft);
+  margin-bottom: 18px;
+}
+
+.icon {
+  font-size: 22px;
+  color: var(--accent);
+}
+
+.name {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--cream);
+  margin-bottom: 6px;
+}
+
+.description {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-muted);
+  min-height: 40px;
+  margin-bottom: 18px;
+}
+
+.levelTrack {
+  height: 3px;
+  border-radius: 999px;
+  background: var(--border);
+  overflow: hidden;
+}
+
+.levelFill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float {
+    animation: none;
+  }
+}

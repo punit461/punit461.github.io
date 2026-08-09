@@ -1,0 +1,99 @@
+[
+  {
+    "id": "toolzonex",
+    "title": "ToolZoneX",
+    "description": "A platform of 100+ free online calculators and AI utilities for finance, health, and everyday decisions.",
+    "longDescription": "Built for India and designed to be fast: 100+ calculators covering income tax, EMI, SIP, PPF, GST, BMI and more. Next.js 15 with the App Router, TypeScript for type-safe calculator logic, and static site generation so every page is pre-rendered at build time.",
+    "image": "https://opengraph.githubassets.com/portfolio-toolzonex/punit461/toolzonex",
+    "tags": ["Next.js", "TypeScript", "Material UI", "SSG"],
+    "categories": ["Full Stack"],
+    "github": "https://github.com/punit461/toolzonex",
+    "live": "https://punit461.github.io/toolzonex",
+    "article": "building-toolzonex",
+    "featured": true,
+    "year": "2026"
+  },
+  {
+    "id": "sam3-annotation",
+    "title": "SAM-3 Professional Annotation Tool",
+    "description": "Production-grade refactor of Meta's Segment Anything Model 3 for rapid, high-fidelity data labeling.",
+    "longDescription": "Turns Meta's SAM 3 into a tool a labeling team can actually use day to day — a professional annotation UI, COCO-format export for VLA model training, and workflows optimized for speed on large datasets.",
+    "image": "https://opengraph.githubassets.com/portfolio-sam3/punit461/SAM-3-Professional-Annotation-Tool",
+    "tags": ["JavaScript", "SAM 3", "COCO", "Computer Vision"],
+    "categories": ["Computer Vision", "AI"],
+    "github": "https://github.com/punit461/SAM-3-Professional-Annotation-Tool",
+    "article": "sam3-annotation-tool",
+    "featured": true,
+    "year": "2026"
+  },
+  {
+    "id": "aura",
+    "title": "Aura Email Assistant",
+    "description": "AI-powered email assistant that fetches unread Outlook mail and drafts intelligent responses.",
+    "longDescription": "Connects to Outlook, reads unread messages, and generates context-aware draft replies with modern LLMs — cutting the time spent on inbox management without ever sending anything on your behalf.",
+    "image": "https://opengraph.githubassets.com/portfolio-aura/punit461/Aura",
+    "tags": ["Python", "LLMs", "Outlook API", "Automation"],
+    "categories": ["AI"],
+    "github": "https://github.com/punit461/Aura",
+    "article": "aura-email-assistant",
+    "featured": true,
+    "year": "2026"
+  },
+  {
+    "id": "ai-a2z",
+    "title": "Artificial-Intelligence-A2Z",
+    "description": "A structured Jupyter-based curriculum for learning AI, ML, and computer vision from scratch.",
+    "longDescription": "A progressive set of notebooks that takes a learner from fundamentals through machine learning and computer vision, designed so each concept is runnable and builds on the one before it.",
+    "image": "https://opengraph.githubassets.com/portfolio-ai-a2z/punit461/Artificial-Intelligence-A2Z",
+    "tags": ["Jupyter", "Python", "Machine Learning", "Teaching"],
+    "categories": ["Learning", "Machine Learning"],
+    "github": "https://github.com/punit461/Artificial-Intelligence-A2Z",
+    "article": "ai-learning-a2z",
+    "featured": true,
+    "year": "2026"
+  },
+  {
+    "id": "trialtreat",
+    "title": "TrialTreat",
+    "description": "Two-sided marketplace connecting beauty academies and trainees with consumers seeking affordable services.",
+    "longDescription": "A full-stack marketplace matching beauty academies and their trainees with customers looking for lower-cost services — built with React on the front end, Node.js services, and PostgreSQL for persistence.",
+    "image": "https://opengraph.githubassets.com/portfolio-trialtreat/punit461/trialtreat",
+    "tags": ["React", "Node.js", "PostgreSQL", "TypeScript"],
+    "categories": ["Full Stack"],
+    "github": "https://github.com/punit461/trialtreat",
+    "featured": false
+  },
+  {
+    "id": "ml-projects",
+    "title": "MachineLearningProjects",
+    "description": "Central repository for machine learning experiments, models, and notebooks.",
+    "longDescription": "A growing collection of ML work kept in one place — experiments, trained models, and the notebooks behind them, so results stay reproducible instead of scattered across one-off files.",
+    "image": "https://opengraph.githubassets.com/portfolio-ml-projects/punit461/MachineLearningProjects",
+    "tags": ["Python", "Machine Learning", "Notebooks"],
+    "categories": ["Machine Learning"],
+    "github": "https://github.com/punit461/MachineLearningProjects",
+    "featured": false
+  },
+  {
+    "id": "lilhakr-browser",
+    "title": "Lilhakr Browser",
+    "description": "A custom desktop web browser built with Python, PyQt6, and PyWebEngine.",
+    "longDescription": "A side project exploring what goes into a desktop browser — window and tab management, navigation, and rendering through PyWebEngine, wrapped in a PyQt6 interface.",
+    "image": "https://opengraph.githubassets.com/portfolio-lilhakr/punit461/Lilhakr_Browser",
+    "tags": ["Python", "PyQt6", "PyWebEngine"],
+    "categories": ["Tools"],
+    "github": "https://github.com/punit461/Lilhakr_Browser",
+    "featured": false
+  },
+  {
+    "id": "supercool-scripts",
+    "title": "Supercool Scripts",
+    "description": "A collection of standalone Python and Jupyter scripts that automate everyday tasks.",
+    "longDescription": "Small, self-contained automation scripts that each solve one recurring annoyance — the kind of tooling that quietly saves an hour a week once it exists.",
+    "image": "https://opengraph.githubassets.com/portfolio-supercool/punit461/supercool_scritps",
+    "tags": ["Python", "Jupyter", "Automation"],
+    "categories": ["Tools"],
+    "github": "https://github.com/punit461/supercool_scritps",
+    "featured": false
+  }
+]

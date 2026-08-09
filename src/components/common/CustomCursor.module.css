@@ -1,0 +1,44 @@
+.dot {
+  position: fixed;
+  top: -4px;
+  left: -4px;
+  width: 8px;
+  height: 8px;
+  background: var(--cream);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  will-change: transform;
+  transition: width 0.25s var(--ease-out), height 0.25s var(--ease-out),
+    background 0.25s var(--ease-out);
+}
+
+.dotActive {
+  width: 0;
+  height: 0;
+}
+
+.ring {
+  position: fixed;
+  top: -18px;
+  left: -18px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(242, 241, 237, 0.4);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  will-change: transform;
+  transition: width 0.3s var(--ease-out), height 0.3s var(--ease-out),
+    border-color 0.3s var(--ease-out), background 0.3s var(--ease-out),
+    top 0.3s var(--ease-out), left 0.3s var(--ease-out);
+}
+
+.ringActive {
+  width: 64px;
+  height: 64px;
+  top: -32px;
+  left: -32px;
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}

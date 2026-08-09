@@ -1,0 +1,27 @@
+.stat {
+  padding: 26px 22px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  transition: border-color 0.35s ease, background 0.35s ease, translate 0.35s ease;
+}
+
+.stat:hover {
+  border-color: var(--border-hover);
+  background: var(--surface-hover);
+  translate: 0 -3px;
+}
+
+.value {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 700;
+  color: var(--cream);
+  letter-spacing: -0.02em;
+}
+
+.label {
+  margin-top: 6px;
+  font-size: 13.5px;
+  color: var(--text-muted);
+}

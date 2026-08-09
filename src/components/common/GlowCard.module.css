@@ -1,0 +1,41 @@
+.card {
+  position: relative;
+  border-radius: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transform: perspective(800px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform 0.4s var(--ease-out), border-color 0.4s var(--ease-out),
+    background 0.4s var(--ease-out), translate 0.4s var(--ease-out);
+  will-change: transform;
+}
+
+.card:hover {
+  border-color: var(--border-hover);
+  background: var(--surface-hover);
+  translate: 0 -4px;
+}
+
+.glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  background: radial-gradient(
+    240px circle at var(--glow-x, 50%) var(--glow-y, 50%),
+    rgba(255, 78, 45, 0.16),
+    transparent 70%
+  );
+}
+
+.card:hover .glow {
+  opacity: 1;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}

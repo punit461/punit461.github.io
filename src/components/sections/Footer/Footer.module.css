@@ -1,0 +1,85 @@
+.footer {
+  position: relative;
+  padding-top: 60px;
+  border-top: 1px solid var(--border);
+}
+
+.inner {
+  padding-bottom: 36px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 40px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--cream);
+}
+
+.logoDot {
+  color: var(--accent);
+}
+
+.backToTop {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-hover);
+  color: var(--text);
+  font-size: 16px;
+  transition: background 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.backToTop:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #17100b;
+  transform: translateY(-4px);
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.copyright {
+  font-size: 13px;
+  color: var(--text-faint);
+}
+
+.socials {
+  display: flex;
+  gap: 24px;
+}
+
+.socials a {
+  font-size: 13px;
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+}
+
+.socials a:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 560px) {
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

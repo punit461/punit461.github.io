@@ -1,0 +1,173 @@
+.about {
+  position: relative;
+  padding-block: clamp(100px, 14vw, 180px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(40px, 6vw, 90px);
+  margin-bottom: clamp(70px, 9vw, 120px);
+}
+
+.imageCol {
+  position: relative;
+}
+
+.imageFrame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0.4) contrast(1.05);
+}
+
+.badge {
+  position: absolute;
+  bottom: -30px;
+  right: -20px;
+  width: 200px;
+  padding: 20px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.badge {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-hover);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.badgeValue {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.badgeLabel {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.contentCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.paragraph {
+  font-size: clamp(1rem, 1.2vw, 1.08rem);
+  line-height: 1.75;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.paragraph:first-child {
+  color: var(--text);
+  font-size: clamp(1.1rem, 1.4vw, 1.25rem);
+}
+
+.milestones {
+  position: relative;
+  margin-top: 24px;
+  padding-left: 26px;
+}
+
+.milestoneLine {
+  position: absolute;
+  left: 4px;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: var(--border-hover);
+  transform-origin: top;
+  transform: scaleY(0);
+}
+
+.milestoneLine::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(var(--accent), var(--accent2));
+}
+
+.milestone {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding-block: 10px;
+}
+
+.milestoneDot {
+  position: absolute;
+  left: -26px;
+  top: 15px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--accent);
+}
+
+.milestoneYear {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--cream);
+  min-width: 44px;
+}
+
+.milestoneLabel {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .imageFrame {
+    max-width: 380px;
+    margin-inline: auto;
+  }
+
+  .badge {
+    right: 50%;
+    transform: translateX(50%);
+    bottom: -24px;
+  }
+
+  .contentCol {
+    margin-top: 60px;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .statsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

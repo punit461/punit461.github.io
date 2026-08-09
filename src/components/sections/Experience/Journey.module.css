@@ -1,0 +1,37 @@
+.journey {
+  position: relative;
+  padding-block: clamp(100px, 14vw, 180px);
+  overflow: hidden;
+}
+
+.tabs {
+  margin-bottom: 48px;
+  min-height: auto !important;
+  border-bottom: 1px solid var(--border);
+}
+
+.tab {
+  font-family: "Inter", sans-serif !important;
+  text-transform: none !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: var(--text-muted) !important;
+  min-height: 52px !important;
+  padding: 12px 22px !important;
+  letter-spacing: -0.01em;
+}
+
+.tabSelected {
+  color: var(--cream) !important;
+  font-weight: 600 !important;
+}
+
+.indicator {
+  background: linear-gradient(90deg, var(--accent), var(--accent2)) !important;
+  height: 2px !important;
+  border-radius: 2px !important;
+}
+
+.panel {
+  position: relative;
+}

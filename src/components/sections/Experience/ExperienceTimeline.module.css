@@ -1,0 +1,179 @@
+.timeline {
+  position: relative;
+  padding-block: 20px;
+}
+
+.line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1.5px;
+  background: linear-gradient(var(--accent), var(--accent2));
+  transform-origin: top;
+  transform: translateX(-50%) scaleY(0);
+}
+
+.item {
+  position: relative;
+  width: 50%;
+  padding: 0 48px 56px;
+}
+
+.left {
+  margin-left: 0;
+  text-align: right;
+}
+
+.right {
+  margin-left: 50%;
+  text-align: left;
+}
+
+.dot {
+  position: absolute;
+  top: 6px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 0 4px var(--bg), 0 0 16px rgba(255, 78, 45, 0.5);
+}
+
+.left .dot {
+  right: -6.5px;
+}
+
+.right .dot {
+  left: -6.5px;
+}
+
+.card {
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+  max-width: 460px;
+  padding: 26px 28px;
+  border-radius: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition: border-color 0.35s ease, background 0.35s ease, translate 0.35s ease;
+}
+
+.card:hover {
+  border-color: var(--border-hover);
+  background: var(--surface-hover);
+  translate: 0 -3px;
+}
+
+.cardHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.role {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--cream);
+}
+
+.duration {
+  font-size: 12.5px;
+  color: var(--text-faint);
+  white-space: nowrap;
+}
+
+.companyRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.company {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.location {
+  font-size: 12.5px;
+  color: var(--text-faint);
+}
+
+.description {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.achievements {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.achievements li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+.achievements li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent2);
+}
+
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.techTag {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+@media (max-width: 860px) {
+  .line {
+    left: 12px;
+  }
+
+  .item,
+  .left,
+  .right {
+    width: 100%;
+    margin-left: 0;
+    text-align: left;
+    padding: 0 0 40px 40px;
+  }
+
+  .left .dot,
+  .right .dot {
+    left: 5.5px;
+    right: auto;
+  }
+
+  .card {
+    max-width: none;
+  }
+}

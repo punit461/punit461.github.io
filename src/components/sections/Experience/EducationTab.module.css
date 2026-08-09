@@ -1,0 +1,98 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.card {
+  display: flex;
+  gap: 22px;
+  padding: 28px;
+  border-radius: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition: border-color 0.35s ease, background 0.35s ease, translate 0.35s ease;
+}
+
+.card:hover {
+  border-color: var(--border-hover);
+  background: var(--surface-hover);
+  translate: 0 -3px;
+}
+
+.iconWrap {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 22px;
+}
+
+.content {
+  flex: 1;
+}
+
+.head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.degree {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--cream);
+}
+
+.duration {
+  font-size: 12.5px;
+  color: var(--text-faint);
+  white-space: nowrap;
+}
+
+.schoolRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.school {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.location,
+.score {
+  font-size: 12.5px;
+  color: var(--text-faint);
+}
+
+.score {
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+.description {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+@media (max-width: 560px) {
+  .card {
+    flex-direction: column;
+  }
+}
