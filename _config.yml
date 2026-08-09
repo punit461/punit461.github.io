@@ -6,6 +6,7 @@ lang: en
 timezone: Asia/Kolkata
 markdown: kramdown
 exclude:
+  - vendor
   - Gemfile
   - Gemfile.lock
   - plan.md
