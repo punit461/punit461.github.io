@@ -71,13 +71,15 @@ export const personalInfo: PersonalInfo = {
   ],
   email: "punit461bhardwaj@gmail.com",
   location: "Bengaluru, India",
+  avatar: "/profile-pic.jpg",
 
   // TODO(punit): optional fields — the UI hides each one cleanly while unset.
   //   resumeUrl:  drop a resume at public/resume.pdf and set this to "/resume.pdf"
   //               to reveal the Download Resume buttons in the hero and navbar.
-  //   avatar:     a real photo at public/avatar.jpg (set to "/avatar.jpg") replaces
-  //               the monogram currently shown in the hero.
-  //   aboutImage: a supporting photo for the About section.
+  //   aboutImage: a second photo for the About section, which still shows the
+  //               monogram. profile-pic.jpg is only 400x400 and the About frame
+  //               renders much larger than the hero's, so it would look soft
+  //               there — point this at a higher-resolution shot when you have one.
 
   socials: [
     { label: "GitHub", href: "https://github.com/punit461", icon: FaGithub },
