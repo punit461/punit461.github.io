@@ -28,14 +28,18 @@ export default function ExperienceTimeline() {
         }
       );
 
+      const isMobile = window.matchMedia("(max-width: 860px)").matches;
       const items = wrapRef.current?.querySelectorAll(`.${styles.item}`);
       items?.forEach((item, i) => {
         gsap.fromTo(
           item,
-          { opacity: 0, x: i % 2 === 0 ? -50 : 50 },
+          isMobile
+            ? { opacity: 0, y: 30 }
+            : { opacity: 0, x: i % 2 === 0 ? -50 : 50 },
           {
             opacity: 1,
             x: 0,
+            y: 0,
             duration: 0.9,
             ease: "power3.out",
             scrollTrigger: { trigger: item, start: "top 85%" },

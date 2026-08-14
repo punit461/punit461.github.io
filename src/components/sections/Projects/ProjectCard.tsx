@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { FaArrowUpRightFromSquare, FaGithub, FaBookOpen } from "react-icons/fa6";
 import type { Project } from "../../../types";
 import { useTilt } from "../../../hooks/useTilt";
@@ -6,11 +7,24 @@ import styles from "./ProjectCard.module.css";
 
 export default function ProjectCard({ project }: { project: Project }) {
   const tiltRef = useTilt<HTMLDivElement>({ max: 6, scale: 1.015 });
+  const [imageFailed, setImageFailed] = useState(false);
 
   return (
     <div ref={tiltRef} className={styles.card} data-cursor="interactive">
       <div className={styles.imageWrap}>
-        <img src={project.image} alt={project.title} className={styles.image} loading="lazy" />
+        {imageFailed ? (
+          <div className={styles.imageFallback} aria-hidden="true">
+            <span>{project.title}</span>
+          </div>
+        ) : (
+          <img
+            src={project.image}
+            alt={project.title}
+            className={styles.image}
+            loading="lazy"
+            onError={() => setImageFailed(true)}
+          />
+        )}
         <div className={styles.imageOverlay} />
         {project.featured && <span className={styles.featuredBadge}>Featured</span>}
         {project.year && <span className={styles.year}>{project.year}</span>}

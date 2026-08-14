@@ -32,6 +32,18 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    const lenis = getLenis();
+    if (menuOpen) {
+      lenis?.stop();
+    } else {
+      lenis?.start();
+    }
+    return () => {
+      lenis?.start();
+    };
+  }, [menuOpen]);
+
   const handleNavClick = (e: React.MouseEvent, href: string) => {
     e.preventDefault();
     setMenuOpen(false);
