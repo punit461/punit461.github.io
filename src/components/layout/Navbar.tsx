@@ -13,7 +13,7 @@ const NAV_LINKS = [
   { label: "Contact", href: "#contact" },
 ];
 
-const TOOLZONEX_URL = "https://punit461.github.io/toolzonex";
+const TOOLZONEX_URL = "https://toolzonex.com";
 
 export default function Navbar() {
   const navRef = useRef<HTMLElement>(null);

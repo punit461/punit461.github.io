@@ -99,7 +99,7 @@ export const personalInfo: PersonalInfo = {
 export const stats: Stat[] = [
   { id: "experience", label: "Years Experience", value: 4, suffix: "+" },
   { id: "support", label: "Support Efficiency Gain", value: 40, suffix: "%" },
-  { id: "tools", label: "Tools Shipped in ToolZoneX", value: 100, suffix: "+" },
+  { id: "tools", label: "Tools Shipped in ToolZoneX", value: 200, suffix: "+" },
   { id: "projects", label: "Open-Source Projects", value: 8 },
 ];
 

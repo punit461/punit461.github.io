@@ -2,13 +2,13 @@
   {
     "id": "toolzonex",
     "title": "ToolZoneX",
-    "description": "A platform of 100+ free online calculators and AI utilities for finance, health, and everyday decisions.",
-    "longDescription": "Built for India and designed to be fast: 100+ calculators covering income tax, EMI, SIP, PPF, GST, BMI and more. Next.js 15 with the App Router, TypeScript for type-safe calculator logic, and static site generation so every page is pre-rendered at build time.",
+    "description": "A platform of 200+ free online calculators and AI utilities for finance, health, and everyday decisions.",
+    "longDescription": "Started India-first and designed to be fast: 200+ calculators covering income tax, EMI, SIP, PPF, GST, BMI and more, now alongside US state paycheck calculators, UK/EU VAT, and AI-cost tooling for a global audience. Next.js 15 with the App Router, TypeScript for type-safe calculator logic, and static site generation so every page is pre-rendered at build time.",
     "image": "https://opengraph.githubassets.com/portfolio-toolzonex/punit461/toolzonex",
     "tags": ["Next.js", "TypeScript", "Material UI", "SSG"],
     "categories": ["Full Stack"],
     "github": "https://github.com/punit461/toolzonex",
-    "live": "https://punit461.github.io/toolzonex",
+    "live": "https://toolzonex.com",
     "article": "building-toolzonex",
     "featured": true,
     "year": "2026"
