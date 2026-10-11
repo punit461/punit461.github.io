@@ -362,6 +362,7 @@ written.push(write("blog.html", blogIndexPage()));
 written.push(write("privacy.html", legalPage("privacy", "Privacy Policy")));
 written.push(write("terms.html", legalPage("terms", "Terms & Conditions")));
 written.push(write("tap-attack-privacy.html", legalPage("tap-attack-privacy", "Tap Attack Privacy Policy")));
+written.push(write("naamjap-privacy.html", legalPage("naamjap-privacy", "Naam Jap Counter Privacy Policy")));
 
 written.push(write("about.html", redirectPage("/#about", "About")));
 written.push(write("projects.html", redirectPage("/#projects", "Projects")));
